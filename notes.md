@@ -33,3 +33,15 @@ There are several reasons why you might choose Debian as your operating system, 
 1. **Stability:** Debian is known for its rock-solid stability and reliability. Its release cycle is more conservative compared to other Linux distributions, which ensures that updates are thoroughly tested before they are released to the public.
 2. **Security:** Debian takes security seriously and includes several security features, such as SELinux and AppArmor, to help protect your system from potential threats. Additionally, Debian provides frequent security updates to patch any vulnerabilities that are discovered.
 3. **Open-source nature:** Debian is completely open-source, meaning that you have access to the source code and can modify and distribute it as you see fit. This makes it a popular choice for developers and other tech enthusiasts.
+
+### Q6: What is SELinux and AppArmor?
+
+**SELinux** and **AppArmor** are two different security frameworks available in Debian and other Linux distributions that are designed to enhance the security of the system by restricting the actions of processes and applications.
+
+- **SELinux (Security-Enhanced Linux)** is a security mechanism that provides mandatory access control (MAC) to the Linux kernel. It enforces access control policies that define which processes and users can access various system resources. SELinux policies are highly customizable and can provide fine-grained control over system security.
+
+- **AppArmor** is a security module that provides a similar function to SELinux, but with a different approach. It works by defining security profiles for individual applications, which restrict their access to specific system resources. This approach makes it easier to create and maintain security policies for specific applications and reduces the risk of unintended consequences from system-wide policies
+
+### Q7: SELinux vs. AppArmor:
+**SELinux (Security-Enhanced Linux)** and **AppArmor** are both security modules used in Linux systems to provide mandatory access control (MAC) for processes and files.
+The main difference between SELinux and AppArmor is that SELinux is a more comprehensive security solution, while AppArmor is easier to set up and manage. SELinux has a larger set of rules and policies and is generally better suited for larger and more complex systems, while AppArmor is more suited for simpler systems or for specific applications that require strict security policies.
