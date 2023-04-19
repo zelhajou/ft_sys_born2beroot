@@ -61,3 +61,44 @@ An extended partition that can be divided into several partitions called logical
 Logical disk partitions are no different from other types in terms of use and function how ever you cannot boot an operating system from a logical partition. One or more logical partitions can be contained in an extended partition.
 
 Generally. logical partitions are created to organize data on a computer this includes media files, document files, etc.
+
+### Q11: What does encrypted logical volume do?
+
+Logical volume (LV) encryption protects data exposure because of lost or stolen hard disk
+
+drives or because of inappropriately decommissioned computers. the base operating system performs (LV) data encryption and decryption during I/O operations
+
+### Q12: What is the use of a logical volume manager in Linux?
+
+LVM is used for the following purpose: Creating single logical volumes of multiple physical volumes or entire hard disk
+
+Logical volumes are groups of information located on physical volumes. A hierarchy of structures is used to manage disk storage. Each individual disk drive, Called a physical volume (PV) has a name. such as /dev/hddisk0. Every physical volume in use belongs to a volume group (VG)
+
+### Q13: What is the Linux File System?
+Linux file system is generally a built-in layer of a Linux operating system used to handle the data management of the storage. It helps to arrange the file on disk storage. It manages the file name, file size, creation date, and much more information about a file.
+
+### Q14: Types of Linux File System
+
+When we install the Linux operating system, Linux offers many file systems such as **Ext, Ext2, Ext3, Ext4, JFS, ReiserFS, XFS, btrfs,** and **swap**.
+
+Ext, Ext2, Ext3 and Ext4 file system
+
+The file system Ext stands for **Extended File System**. The Ext file system is an older version, and is no longer used due to some limitations.
+
+**Ext2** is the first Linux file system that allows managing two terabytes of data. Ext3 is developed through Ext2; it is an upgraded version of Ext2 and contains backward compatibility. The major drawback of Ext3 is that it does not support servers because this file system does not support file recovery and disk snapshots.
+
+**Ext4** file system is the faster file system among all the Ext file systems. It is a very compatible option for the SSD (solid-state drive) disks, and it is the default file system in Linux distribution.
+
+### Q15: Swap File System
+
+Swap Space in Linux is used when the amount of physical memory (RAM) is full. Inactive pages in memory are moved to the swap space. while swap space can help machines with a small amount of RAM.
+
+### Q16: What is journaling in Linux?
+
+A journaling file system is a file system that keeps track of changes not yet committed to the file system’s main part by recording the goal of such changes in a data structure known as a journal which is usually a circular log
+
+The journal allows a file system to instantly recover to the last good state after a system crash
+
+### Q17: What is A mount point in Linux? 
+
+A mount point is a directory on a file system that is logically linked to another file system. Mount points are used to make the data on a different physical storage drive easily available in a folder structure.
