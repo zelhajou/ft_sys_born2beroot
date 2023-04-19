@@ -45,3 +45,19 @@ There are several reasons why you might choose Debian as your operating system, 
 ### Q7: SELinux vs. AppArmor:
 **SELinux (Security-Enhanced Linux)** and **AppArmor** are both security modules used in Linux systems to provide mandatory access control (MAC) for processes and files.
 The main difference between SELinux and AppArmor is that SELinux is a more comprehensive security solution, while AppArmor is easier to set up and manage. SELinux has a larger set of rules and policies and is generally better suited for larger and more complex systems, while AppArmor is more suited for simpler systems or for specific applications that require strict security policies.
+
+### Q8: What is a primary partition? 
+
+The primary partition is a type of hard disk partition that can contain both an operating system and user data.
+
+This is the only partition type that can be set active the BIOS on a system can only detect this type of partition and you can only from this primary partition.
+
+### Q9: What is an extended partition?
+
+An extended partition that can be divided into several partitions called logical partitions, you don’t need to assign letters and install a file system. it acts as a container for logical partitions on a system.
+
+### Q10: What is a logical partition?
+
+Logical disk partitions are no different from other types in terms of use and function how ever you cannot boot an operating system from a logical partition. One or more logical partitions can be contained in an extended partition.
+
+Generally. logical partitions are created to organize data on a computer this includes media files, document files, etc.
