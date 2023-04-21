@@ -28,4 +28,11 @@ dpkg is a low-level tool that is used to install, remove, and manage individual 
 the sudoers file is where you grant users elevated privileges. By default, only the root user has these privileges. But, in some cases, it may be necessary for regular users to have elevated privileges as well.
 The sudoers file lives in the /etc/sudoers, a plain text file containing the policies on what privileges a user gains when executing the sudo command.
 
-![visudo](https://user-images.githubusercontent.com/39954629/233694816-d16c3b55-e84d-4de3-a811-3284b6bd3424.PNG)
+![visudo](https://user-images.githubusercontent.com/39954629/233695566-20cb2114-1bff-4bc6-a683-ea78a4a879c4.PNG)
+
+** Defaults Section **
+
+![defaul](https://user-images.githubusercontent.com/39954629/233696135-779dfecd-f331-45bb-b548-62aa2580b3b7.PNG)
+- `Defaults env_reset` - Executing commands with sudo creates a new environment with minimal or default environment variables. In most Linux distros, sudo will load the environment variable in the /etc/environment file.
+
+
