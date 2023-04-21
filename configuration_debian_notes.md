@@ -28,4 +28,4 @@ dpkg is a low-level tool that is used to install, remove, and manage individual 
 the sudoers file is where you grant users elevated privileges. By default, only the root user has these privileges. But, in some cases, it may be necessary for regular users to have elevated privileges as well.
 The sudoers file lives in the /etc/sudoers, a plain text file containing the policies on what privileges a user gains when executing the sudo command.
 
-![Uploading visudo.PNG…]()
+![visudo](https://user-images.githubusercontent.com/39954629/233694816-d16c3b55-e84d-4de3-a811-3284b6bd3424.PNG)
