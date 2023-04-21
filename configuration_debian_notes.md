@@ -23,3 +23,9 @@ To summarize, aptitude and apt are both package management tools in Linux, but a
 
 ### the difference between `apt` and `dpkg`
 dpkg is a low-level tool that is used to install, remove, and manage individual packages on a Debian-based system, whereas apt (Advanced Package Tool) is a higher-level tool that uses dpkg as a backend to manage packages and their dependencies. Apt provides additional functionality such as automatic dependency resolution, package searching, and repository management.
+
+### `sudoers`
+the sudoers file is where you grant users elevated privileges. By default, only the root user has these privileges. But, in some cases, it may be necessary for regular users to have elevated privileges as well.
+The sudoers file lives in the /etc/sudoers, a plain text file containing the policies on what privileges a user gains when executing the sudo command.
+
+![Uploading visudo.PNG…]()
