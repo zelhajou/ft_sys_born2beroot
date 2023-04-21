@@ -26,13 +26,33 @@ dpkg is a low-level tool that is used to install, remove, and manage individual 
 
 ### `sudoers`
 the sudoers file is where you grant users elevated privileges. By default, only the root user has these privileges. But, in some cases, it may be necessary for regular users to have elevated privileges as well.
+
 The sudoers file lives in the /etc/sudoers, a plain text file containing the policies on what privileges a user gains when executing the sudo command.
 
 ![visudo](https://user-images.githubusercontent.com/39954629/233695566-20cb2114-1bff-4bc6-a683-ea78a4a879c4.PNG)
 
-** Defaults Section **
+**Defaults Section**
 
 ![defaul](https://user-images.githubusercontent.com/39954629/233696135-779dfecd-f331-45bb-b548-62aa2580b3b7.PNG)
 - `Defaults env_reset` - Executing commands with sudo creates a new environment with minimal or default environment variables. In most Linux distros, sudo will load the environment variable in the /etc/environment file.
+- `Defaults mail_badpass` – This line triggers sending an email to the root when a user enters a wrong password with sudo.
+- `Defaults mail_badpass` – This line triggers sending an email to the root when a user enters a wrong password with sudo.
+- `Defaults secure_path` - This line defines the PATH environment variable that sudo uses instead of the user’s PATH environment.
+
+**User and Group Sudo Privileges**
+![user](https://user-images.githubusercontent.com/39954629/233701127-8281517b-3ba3-41b9-b1bf-f51fda28c010.PNG)
+Note: The % at the beginning indicates that the policy applies to the group members.
+
+  - The first field defines that his policy applies to the `root` user and the members of the `sudo` groups.
+  - The first `ALL` means that the rule applies to all hosts.
+  - The second `ALL` allows the `root` account to run commands as any user.
+  - The third `ALL` allows the `root` account to run commands as any group.
+  - The last `ALL` means that this policy applies to command commands.
+
+**Include Directives**
+![include](https://user-images.githubusercontent.com/39954629/233702551-908bbcd6-1fb2-4bc7-9360-5ff1d3988fb1.PNG)
+`#includedir /etc/sudoers.d` – This line tells sudo to look in the `/etc/sudoers.d` directory for any additional configuration files.
+
+
 
 
