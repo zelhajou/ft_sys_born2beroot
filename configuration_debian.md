@@ -22,7 +22,8 @@ Add user to sudo group:
 ```bash
 # sudo usermod -aG sudo <username>
 ```
-Then ```exit``` root session and ```exit``` again to return to login prompt. Log in again as user.
+Then ```exit``` root session and ```exit``` again to return to login prompt. Log in again as user. or `reboot` for changes to take effect
+
 Let's check if this user has sudo privileges:
 ```bash
 $ sudo whoami
@@ -36,13 +37,38 @@ Edit sudoers.tmp file as root with the command:
 ```bash
 # sudo visudo
 ```
-And add these default settings as per subject instructions:
+To change visudo editor from nano to vim:
 ```bash
-Defaults     passwd_tries=3
-Defaults     badpass_message="Wrong password. Try again!"
-Defaults     logfile="/var/log/sudo/sudo.log"
-Defaults     log_input
-Defaults     log_output
-Defaults     requiretty
+sudo update-alternatives --config editor
 ```
+And add these default settings as per subject instructions:
+- To limit authentication using sudo to 3 attempts in the event of an incorrect password
+  ```bash
+  Defaults     passwd_tries=3
+  ```
+- To add a custom error message in the event of an incorrect password:
+  ```bash
+  Defaults      badpass_message="Wrong password. Try again!"
+  ```
+or
+  ```bash
+  Defaults      insults
+  ```
+- To archive all sudo inputs & outputs to `/var/log/sudo`
+  ```bash
+  Defaults     log_input
+  Defaults     log_output
+  Defaults     iolog_dir="/var/log/sudo"
+  Defaults     logfile="/var/log/sudo/sudo.log"
+  ```
+- To require TTV:
+  ```bash
+    Defaults     requiretty
+  ```
+- To set sudo paths: Defaults
+ ```bash
+  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+ ```
 If ```var/log/sudo``` directory does not exist, ```mkdir var/log/sudo```.
+ 
+you can delete a user using userdel command and delete a group using `groupdel` command.
