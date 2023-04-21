@@ -40,6 +40,7 @@ The sudoers file lives in the /etc/sudoers, a plain text file containing the pol
 - `Defaults secure_path` - This line defines the PATH environment variable that sudo uses instead of the user’s PATH environment.
 
 **User and Group Sudo Privileges**
+
 ![user](https://user-images.githubusercontent.com/39954629/233701127-8281517b-3ba3-41b9-b1bf-f51fda28c010.PNG)
 Note: The % at the beginning indicates that the policy applies to the group members.
 
@@ -50,6 +51,7 @@ Note: The % at the beginning indicates that the policy applies to the group memb
   - The last `ALL` means that this policy applies to command commands.
 
 **Include Directives**
+
 ![include](https://user-images.githubusercontent.com/39954629/233702551-908bbcd6-1fb2-4bc7-9360-5ff1d3988fb1.PNG)
 `#includedir /etc/sudoers.d` – This line tells sudo to look in the `/etc/sudoers.d` directory for any additional configuration files.
 
