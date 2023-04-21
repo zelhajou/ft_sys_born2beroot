@@ -60,10 +60,10 @@ And add these default settings as per subject instructions:
   ```bash
   Defaults      badpass_message="Wrong password. Try again!"
   ```
-or
-  ```bash
-  Defaults      insults
-  ```
+  or
+    ```bash
+    Defaults      insults
+    ```
 - To archive all sudo inputs & outputs to `/var/log/sudo`
   ```bash
   Defaults     log_input
