@@ -66,7 +66,7 @@ And add these default settings as per subject instructions:
     ```
 - To archive all sudo inputs & outputs to `/var/log/sudo`
   ```bash
-  Defaults     log_host, log_year
+  Defaults     log_input, log_output
   Defaults     logfile="/var/log/sudo/sudo.log"
   ```
 - To require TTV:
