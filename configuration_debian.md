@@ -22,7 +22,16 @@ Add user to sudo group:
 ```bash
 # sudo usermod -aG sudo <username>
 ```
-Then ```exit``` root session and ```exit``` again to return to login prompt. Log in again as user. or `reboot` for changes to take effect
+if user not exist
+```bash
+adduser <username> sudo
+```
+Verify whether user was added:
+```bash
+getent group sudo
+```
+
+Then ```exit``` root session and ```exit``` again to return to login prompt. Log in again as user. or `reboot`
 
 Let's check if this user has sudo privileges:
 ```bash
@@ -32,6 +41,7 @@ It should answer ```root```. If not, modify sudoers file as explained below and 
 ```bash
 username  ALL=(ALL:ALL) ALL
 ```
+**Configuring sudo:** `sudo visudo`:
 
 Edit sudoers.tmp file as root with the command:
 ```bash
