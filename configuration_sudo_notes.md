@@ -42,6 +42,12 @@ The sudoers file lives in the /etc/sudoers, a plain text file containing the pol
 - `Defaults mail_badpass` – This line triggers sending an email to the root when a user enters a wrong password with sudo.
 - `Defaults secure_path` - This line defines the PATH environment variable that sudo uses instead of the user’s PATH environment.
 
+![visudo2](https://user-images.githubusercontent.com/39954629/233753979-044a4f48-b66f-47bd-8fce-2830d9272dfc.png)
+
+- `Defaults requiretty` - When requiretty is set, sudo must be run from a logged-in terminal session (a tty).
+
+  TTY in Linux stands for "teletype" and it is a terminal that provides a command-line interface to the system. TTYs are represented by virtual devices and can be accessed by different users simultaneously. They are used for running command-line applications, system maintenance tasks, and remote access via a terminal emulator program. TTYs are an essential part of Linux and Unix-based systems, providing a flexible and powerful way to interact with the system via a text-based interface.
+  
 **User and Group Sudo Privileges**
 
 ![user](https://user-images.githubusercontent.com/39954629/233701127-8281517b-3ba3-41b9-b1bf-f51fda28c010.PNG)
