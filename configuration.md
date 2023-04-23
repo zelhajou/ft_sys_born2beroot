@@ -82,7 +82,7 @@ If ```var/log/sudo``` directory does not exist, ```mkdir var/log/sudo```.
 you can delete a user using userdel command and delete a group using `groupdel` command.
 
 ## SSH Setup
-
+### Step 1: Installing & Configuring SSH
 Install OpenSSH:
 
 ```bash
@@ -124,7 +124,7 @@ $ sudo service ssh status
 $ systemctl status ssh
 ```
 
-## UFW Setup
+### Step 2: Installing & Configuring UFW
 
 Install and enable UFW:
 ```bash
@@ -159,7 +159,7 @@ $ sudo ufw delete <port index number>
 ```
 Careful with the numbered method, the index numbers change after a deletion, check between deletes to get the correct port index number!
 
-## Connecting to Server via SSH
+### Step 3: Connecting to Server via SSH
 
 Forward the host port 4242 to the guest port 4242: in VirtualBox, 
 * go to VM >> Settings >> Network >> Adapter 1 >> Advanced >> Port Forwarding.
