@@ -147,6 +147,35 @@ Check UFW status:
 ```bash
 $ sudo ufw status verbose
 ```
+Remove port rule:
+```bash
+$ sudo ufw delete allow <port>
+$ sudo ufw delete deny <port>
+```
+Or, another method for rule deletion:
+```bash
+$ sudo ufw status numbered
+$ sudo ufw delete <port index number>
+```
+Careful with the numbered method, the index numbers change after a deletion, check between deletes to get the correct port index number!
+
+## Connecting to Server via SSH
+
+Forward the host port 4242 to the guest port 4242: in VirtualBox, 
+* go to VM >> Settings >> Network >> Adapter 1 >> Advanced >> Port Forwarding.
+* add a rule: Host port 4242 and guest port 4242.
+
+Restart SSH service after this change.
+
+In the host terminal, connect like this:
+```bash
+$ ssh <username>@localhost -p 4242
+```
+Or like this:
+```bash
+$ ssh <username>@127.0.0.1 -p 4242
+```
+To quit the ssh connection, just ```exit```.
 
 
 
