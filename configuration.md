@@ -1,7 +1,7 @@
 # Born2beroot Configuration
 
 ## Sudo Setup
-
+### Step 1: Installing sudo
 Log in as root:
 ```bash
 $ su root
@@ -10,14 +10,13 @@ or
 ```bash
 $ su -
 ```
-
 Install sudo:
 ```bash
 # apt update
 # apt upgrade
 # apt install sudo
 ```
-
+### Step 2: Adding User to sudo Group
 Add user to sudo group:
 ```bash
 sudo usermod -aG sudo <username>
@@ -30,8 +29,9 @@ Verify whether user was added:
 ```bash
 getent group sudo
 ```
-
 Then ```exit``` root session and ```exit``` again to return to login prompt. Log in again as user. or `reboot`
+
+### Step 3: Running root-Privileged Commands
 
 Let's check if this user has sudo privileges:
 ```bash
@@ -41,6 +41,13 @@ It should answer ```root```. If not, modify sudoers file as explained below and 
 ```bash
 username  ALL=(ALL:ALL) ALL
 ```
+From here on out, run root-privileged commands via prefix sudo. For instance:
+```bash
+$ sudo apt update
+```
+
+### Step 4: Configuring sudo
+
 **Configuring sudo:** `sudo visudo`:
 
 Edit sudoers.tmp file as root with the command:
@@ -177,7 +184,6 @@ $ ssh <username>@127.0.0.1 -p 4242
 ```
 To quit the ssh connection, just ```exit```.
 
-
-
+## User Management
 
 
