@@ -234,4 +234,15 @@ specifically the below line:
 password        requisite                       pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
 ```
 
+### Step 2: Creating a New User
+
+**Hostname**
+
+The hostname must be ```your_intra_login42```, but the hostname must be changed during the Born2beroot evaluation. The following commands might help:
+```bash
+$ sudo hostnamectl set-hostname <new_hostname>
+$ hostnamectl status
+```
+
+There must be a user with ```your_intra_login``` as username. During evaluation, you will be asked to create, delete, modify user accounts. The following commands are useful to know:
 
