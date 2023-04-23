@@ -246,3 +246,9 @@ $ hostnamectl status
 
 There must be a user with ```your_intra_login``` as username. During evaluation, you will be asked to create, delete, modify user accounts. The following commands are useful to know:
 
+- ```sudo adduser <username>``` : Create a new user
+- ```userdel -r```              : Deletes a user and all associated files.
+- ```getent passwd <username>```: Verify whether user was successfully created
+- ```sudo chage -l <username>```: Verify newly-created user's password expire information
+
+### Step 3: Creating a New Group
