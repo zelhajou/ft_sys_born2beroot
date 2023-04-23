@@ -252,3 +252,7 @@ There must be a user with ```your_intra_login``` as username. During evaluation,
 - ```sudo chage -l <username>```: Verify newly-created user's password expire information
 
 ### Step 3: Creating a New Group
+
+- ```sudo addgroup user42```          : Create new user42 group
+- ```sudo adduser <username> user42```: Add user to user42 group
+- ```getent group user42```           : Verify whether user was successfully added to user42 group
