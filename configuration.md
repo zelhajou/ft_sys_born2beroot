@@ -20,7 +20,7 @@ Install sudo:
 
 Add user to sudo group:
 ```bash
-# sudo usermod -aG sudo <username>
+sudo usermod -aG sudo <username>
 ```
 if user not exist
 ```bash
@@ -35,7 +35,7 @@ Then ```exit``` root session and ```exit``` again to return to login prompt. Log
 
 Let's check if this user has sudo privileges:
 ```bash
-$ sudo whoami
+sudo whoami
 ```
 It should answer ```root```. If not, modify sudoers file as explained below and add this line:
 ```bash
@@ -45,7 +45,7 @@ username  ALL=(ALL:ALL) ALL
 
 Edit sudoers.tmp file as root with the command:
 ```bash
-# sudo visudo
+sudo visudo
 ```
 To change visudo editor from nano to vim:
 ```bash
@@ -80,3 +80,47 @@ And add these default settings as per subject instructions:
 If ```var/log/sudo``` directory does not exist, ```mkdir var/log/sudo```.
  
 you can delete a user using userdel command and delete a group using `groupdel` command.
+
+## SSH Setup
+
+Install OpenSSH:
+
+```bash
+$ sudo apt install openssh-server
+```
+Check SSH status:
+```bash
+$ sudo systemctl status ssh
+```
+Change SSH listening port to 4242:
+```bash
+$ sudo nano /etc/ssh/sshd_config
+```
+Find this line:
+```bash
+#Port 22
+```
+And uncomment (delete #) and change it to 4242:
+```bash
+Port 4242
+```
+To disable SSH login as root irregardless of authentication mechanism replace: 
+
+Find this line:
+```bash
+#PermitRootLogin prohibit-password 
+
+And uncomment (delete #) and change it with:
+PermitRootLogin no
+
+Restart SSH service
+```bash
+$ sudo systemctl restart ssh
+```
+Check SSH status
+```bash
+$ sudo service ssh status
+$ systemctl status ssh
+```
+
+
