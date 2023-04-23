@@ -186,4 +186,52 @@ To quit the ssh connection, just ```exit```.
 
 ## User Management
 
+### Step 1: Setting Up a Strong Password Policy
+
+Password Age
+
+Edit ```/etc/login.defs``` and find "password aging controls". Modify them as per subject instructions:
+```bash
+PASS_MAX_DAYS 30
+PASS_MIN_DAYS 2
+PASS_WARN_AGE 7
+```
+These changes aren't automatically applied to existing users, so use chage command to modify for any users and for root:
+```bash
+$ sudo chage -M 30 <username/root>
+$ sudo chage -m 2 <username/root>
+$ sudo chage -W 7 <username/root>
+```
+Use ```chage -l <username/root>``` to check user settings.
+
+Password Strength
+
+Install password quality verification library:
+```bash
+$ sudo apt install libpam-pwquality
+```
+Verify installation:
+
+```bash
+dpkg -l | grep libmap-pwquality
+```
+Configure password strength policy via:
+```bash
+sudo vim /etc/pam.d/common-password
+```
+specifically the below line:
+```vi
+25 password		requisite	pam_pwquality.so retry=3
+``` 
+- To set password minimum length to 10 characters, add the following option to the above line: `minlen=10`
+- To require password to contain at least an uppercase character and a numeric character: ucredit=-1 dcredit=-1
+- To set a maximum of 3 consecutive identical characters: maxrepeat=3
+- To reject the password if it contains in some form: reject_username
+- To set the number of changes required in the new password from the old password to 7: difok=7
+- To implement the same policy on root: enforce_for_root
+- Finally, it should look like the bellow:
+```bash
+password        requisite                       pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
+```
+
 
