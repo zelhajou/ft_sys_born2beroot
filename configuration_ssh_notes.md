@@ -21,3 +21,8 @@ The port is used for Secure Shell (SSH) communication and allows remote administ
 SSH Access To Root Account
 
 SSH (Secure Shell) is often used for logging into remote servers as root. However, the default configuration in OpenSSH prevents root login using passwords.
+
+### `UFW`
+UFW (Uncomplicated Firewall) is a user-friendly front-end for managing netfilter firewall rules in Linux operating systems. It is designed to make managing firewall rules easier for administrators who are not familiar with iptables syntax. With UFW, users can configure rules to allow or block traffic based on IP addresses, ports, and protocols.
+
+
