@@ -109,10 +109,11 @@ To disable SSH login as root irregardless of authentication mechanism replace:
 Find this line:
 ```bash
 #PermitRootLogin prohibit-password 
-
+```
 And uncomment (delete #) and change it with:
+```bash
 PermitRootLogin no
-
+```
 Restart SSH service
 ```bash
 $ sudo systemctl restart ssh
@@ -122,5 +123,32 @@ Check SSH status
 $ sudo service ssh status
 $ systemctl status ssh
 ```
+
+## UFW Setup
+
+Install and enable UFW:
+```bash
+$ sudo apt install ufw
+```
+Verify installaiton: 
+```bash
+dpkg -l | grep ufw
+```
+Enabe FireWall
+```bash
+$ sudo ufw enable
+```
+Allow or deny ports:
+```bash
+$ sudo ufw allow 4242
+$ sudo ufw deny <port>
+```
+Check UFW status:
+```bash
+$ sudo ufw status verbose
+```
+
+
+
 
 
