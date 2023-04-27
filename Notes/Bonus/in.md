@@ -1,9 +1,7 @@
-### `lighttpd`
+`Lighttpd`, `MariaDB`, `WordPress`, and `FTP` are four software components that can be used together to create and run a web application or website.
 
-lighttpd (pronounced "lighty") is a lightweight open-source web server software that is designed to be fast, secure, and efficient. It is designed to handle high traffic websites while using fewer system resources than other popular web servers like Apache and Nginx. Its modular architecture allows for easy customization and configuration, and it supports a variety of web technologies such as FastCGI, CGI, SCGI, and HTTP/1.1. Overall, lighttpd is a great option for serving static content or for implementing load-balancing in a web server cluster.
+As explained before, `Lighttpd` is a lightweight web server that can handle a large number of requests with minimal resource consumption, `MariaDB` is a relational database management system that provides the backend database storage for WordPress data, and `WordPress` is a content management system used to create and manage website content.
 
-### `MariaDB`
+`FTP`, _or File Transfer Protocol_, is a network protocol used to transfer files between computers over the internet. It is often used to upload and manage website files and directories on a web server.
 
-MariaDB is a popular open-source relational database management system (RDBMS) that is a fork of MySQL. It was created as a community-driven alternative to MySQL after its acquisition by Oracle Corporation in 2009. MariaDB is compatible with MySQL, meaning that applications that work with MySQL can also work with MariaDB. It offers a variety of features, including high availability, replication, and scalability. MariaDB is widely used in web development and is supported by many programming languages and frameworks.
-
-
+Together, these software components provide a complete solution for creating and managing a web application or website. Lighttpd handles incoming web requests, MariaDB provides the database storage for WordPress data, WordPress is used to create and manage website content, and FTP can be used to upload and manage website files and directories.
