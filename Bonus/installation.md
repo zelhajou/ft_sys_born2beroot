@@ -118,7 +118,7 @@ Exit the MariaDB shell: `exit`
 - Install php-cgi & php-mysql via `sudo apt install php-cgi php-mysql php7.4`
 - Verify installation: dpkg -l | grep php
 
-### Step 3: Installing WordPress
+### Step 4: Downloading & Configuring WordPress
 
 - Install wget: sudo apt install wget
 
