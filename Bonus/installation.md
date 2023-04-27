@@ -2,6 +2,8 @@
 
 ## Installation
 
+## Linux Lighttpd MariaDB PHP (LLMP) Stack
+
 ### Step 1: Installing Lighttpd
 
 Install lighttpd via `sudo apt install lighttpd`.
@@ -113,5 +115,62 @@ Exit the MariaDB shell: `exit`
 
 ### Step 3: Installing PHP
 
+- Install php-cgi & php-mysql via `sudo apt install php-cgi php-mysql php7.4`
+- Verify installation: dpkg -l | grep php
+
+### Step 3: Installing WordPress
+
+- Install wget: sudo apt install wget
+
+Then download the latest version of Wordpress, extract it and place the contents in `/var/www/html/` directory. Then clean up archive and extraction directory:
+```bash
+$ sudo wget http://wordpress.org/latest.tar.gz
+$ sudo tar -xzvf latest.tar.gz
+$ sudo mv wordpress/* /var/www/html/
+$ sudo rm -rf latest.tar.gz wordpress/
+```
+
+Create WordPress configuration file:
+
+```bash
+$ sudo mv /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
+```
+
+Edit `/var/www/html/wp-config.php` with database info:
+
+```php 
+<?php
+/* ... */
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'wordpress_db' );
+
+/** Database username */
+define( 'DB_USER', 'admin' );
+
+/** Database password */
+define( 'DB_PASSWORD', 'WPpassw0rd' );
+
+/** Database host */
+define( 'DB_HOST', 'localhost' );
+```
+
+Change permissions of WordPress directory to grant rights to web server and restart lighttpd:
+```bash
+$ sudo chown -R www-data:www-data /var/www/html/
+$ sudo chmod -R 755 /var/www/html/
+$ sudo systemctl restart lighttpd
+```
+
+### Step 5: Configuring Lighttpd
+
+Enable below modules via `sudo lighty-enable-mod fastcgi` `sudo lighty-enable-mod fastcgi-php` `sudo service lighttpd force-reload`.
+
+```bash
+$ sudo lighty-enable-mod fastcgi
+$ sudo lighty-enable-mod fastcgi-php
+$ sudo service lighttpd force-reload
+```
+
+## File Transfer Protocol (FTP)
 
 
