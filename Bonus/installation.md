@@ -90,7 +90,7 @@ MariaDB [(none)]> GRANT ALL ON wordpress_db.* TO 'admin'@'localhost' IDENTIFIED 
 Check that the database was created successfully, go back into MariaDB interface:
 
 ```bash
-$ mysql -u root -p
+$ mariadb -u <username> -p
 ```
 
 And show databases:
