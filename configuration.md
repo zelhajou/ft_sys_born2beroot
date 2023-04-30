@@ -256,3 +256,10 @@ There must be a user with ```your_intra_login``` as username. During evaluation,
 - ```sudo addgroup user42```          : Create new user42 group
 - ```sudo adduser <username> user42```: Add user to user42 group
 - ```getent group user42```           : Verify whether user was successfully added to user42 group
+
+## cron
+### Setting Up a cron Job
+
+- Configure cron as root: `sudo crontab -u root -e`
+- To schedule a shell script to run every 10 minutes replace: `23 # m h dom mon dow command with 23 */10 * * * * sh /path/to/script`
+- Check root's scheduled cron jobs: `sudo crontab -u root -l`
