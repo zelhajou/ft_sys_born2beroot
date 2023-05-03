@@ -22,5 +22,5 @@ To complete this project, you will need:
 - In the "Storage" section, select the "Empty" CD icon and click on the "Choose Virtual Optical Disk File" button.
 - Select the Debian ISO image that you downloaded earlier.
 - Click on the "Start" button to boot the VM from the ISO image.
-- Follow the [Debian installation]() wizard to install the operating system.
+- Follow the [Debian installation](https://github.com/zakelh6/Born2beRoot/blob/main/installation.md) wizard to install the operating system.
 - Once the installation is complete, log in to the VM using the credentials that you created during the installation process.
