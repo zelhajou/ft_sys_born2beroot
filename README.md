@@ -1,5 +1,5 @@
 
-![42_born2beroot_banner_new](https://github.com/zelhajou/Born2beRoot/assets/39954629/0bc8d5fd-2540-43c6-9646-9933c9a48f40)
+![Born2beroot](https://github.com/zelhajou/Born2beRoot/assets/39954629/48108425-b7fa-42bf-8023-5f05bd47c770)
 
 # Born2beRoot
 
