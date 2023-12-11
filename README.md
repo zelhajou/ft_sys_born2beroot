@@ -1,8 +1,6 @@
 
 ![Born2beroot](https://github.com/zelhajou/Born2beRoot/assets/39954629/48108425-b7fa-42bf-8023-5f05bd47c770)
 
-# Born2beRoot
-
 Born2beRoot is a project for the 42 School curriculum. It is a system administration project that involves setting up a virtual machine (VM) and configuring it to meet certain security and performance requirements.
 
 The VM is based on Debian, and the project is divided into several parts that cover various aspects of system administration, including installation, user management, network configuration, security, and logging.
