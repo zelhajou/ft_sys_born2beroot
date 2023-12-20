@@ -1,5 +1,5 @@
 
-![Born2beroot](https://github.com/zelhajou/Born2beRoot/assets/39954629/48108425-b7fa-42bf-8023-5f05bd47c770)
+![ascii-text-art (2)](https://github.com/zelhajou/Born2beRoot/assets/39954629/7cda640f-c250-4778-877c-d77ac8dc2435)
 
 Born2beRoot is a project for the 42 School curriculum. It is a system administration project that involves setting up a virtual machine (VM) and configuring it to meet certain security and performance requirements.
 
