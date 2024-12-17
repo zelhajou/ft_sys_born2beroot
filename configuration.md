@@ -213,7 +213,7 @@ $ sudo apt install libpam-pwquality
 Verify installation:
 
 ```bash
-dpkg -l | grep libmap-pwquality
+dpkg -l | grep libpam-pwquality
 ```
 Configure password strength policy via:
 ```bash
